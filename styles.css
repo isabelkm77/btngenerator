@@ -3,6 +3,9 @@
     --bgColor: #f8f8f8;
     --h1color: #A4D5C3;
     --propertiesBgColor: #B0CBF1;
+    --butonBgColor: #a7dbf7;
+    --codeNameColor: #b98efb;
+    --codeColor: #b98efb;
 }
 
 html,
@@ -21,15 +24,126 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 3rem;
     height: 100vh;
 }
 
 h2 {
-    grid-column-start: 1;
-    grid-column-end: 1;
     color: var(--h1color);
-    font-size: 3rem;
+    font-size: 3vw;
     text-align: center;
-    margin-top: 20px;
+}
+
+.properties,
+.button {
+    height: 83vh;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.button {
+    height: 40vh;
+}
+
+.properties {
+    background-color: var(--propertiesBgColor);
+}
+
+label {
+    margin-right: 30px;
+    color: #443344;
+    font-size: 1.2rem;
+}
+
+input,
+select {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: .9rem;
+    border: none;
+    margin-top: 15px;
+}
+
+input [type="radio"] {
+    width: 30px;
+}
+
+input [name="border"]:last-child {
+    margin-left: 40px;
+}
+
+input [type="number"] {
+    width: 47%;
+    display: inline-block;
+}
+
+#border {
+    opacity: 0;
+}
+
+.left {
+    margin: 0;
+}
+
+.right {
+    margin-left: 18px;
+}
+
+input:first-child {
+    margin-top: 0;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+.button {
+    background-color: var(--butonBgColor);
+}
+
+button {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #48cfad;
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 50px;
+    color: var(--white);
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+}
+
+.html,
+.css {
+    color: var(--codeNameColor);
+    opacity: 0;
+}
+
+.html {
+    padding-top: 10px;
+}
+
+.css {
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+#html-code,
+#css-code {
+    padding-left: 20px;
+    color: var(--codeColor);
 }
